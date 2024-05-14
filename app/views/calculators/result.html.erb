@@ -1,0 +1,11 @@
+<h1>String Calculator Result</h1>
+
+<% if @result %>
+  <h2>Result: <%= @result %></h2>
+<% end %>
+
+<% if @error %>
+  <h2 style="color: red;">Error: <%= @error %></h2>
+<% end %>
+
+<%= link_to 'Back', root_path %>

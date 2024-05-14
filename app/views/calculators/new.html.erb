@@ -1,0 +1,12 @@
+<h1>String Calculator</h1>
+
+<%= form_with url: add_path, method: :post, local: true do |form| %>
+  <div>
+    <%= form.label :numbers, "Enter numbers:" %>
+    <%= form.text_field :numbers %>
+  </div>
+
+  <div>
+    <%= form.submit "Calculate" %>
+  </div>
+<% end %>
