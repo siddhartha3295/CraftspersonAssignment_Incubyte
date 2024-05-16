@@ -1,11 +1,12 @@
-<h1>String Calculator Result</h1>
-
-<% if @result %>
-  <h2>Result: <%= @result %></h2>
-<% end %>
+<h1>Calculation Result</h1>
 
 <% if @error %>
-  <h2 style="color: red;">Error: <%= @error %></h2>
+  <!-- Display error message in red color if there is an error -->
+  <p style="color: red;"><%= @error %></p>
+<% else %>
+  <!-- Display the result if there is no error -->
+  <p>The result is <%= @result %></p>
 <% end %>
 
-<%= link_to 'Back', root_path %>
+<!-- Link to start a new calculation -->
+<%= link_to 'New Calculation', new_calculator_path %>
